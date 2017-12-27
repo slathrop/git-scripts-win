@@ -1,2 +1,3 @@
-# git-scripts-win
-Git Shell Scripts for Windows (Batch Files)
+# Git Shell Scripts for Windows (Batch Files)
+
+Simple Windows Batch files for common git operations.
