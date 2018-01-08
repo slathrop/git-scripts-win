@@ -25,10 +25,12 @@ git config --global user.name "YourUserName"
 git config --global user.email YourEmailAddress@example.com
 ```
 
-Finally, if you need to sign-in to GitHub repos with different credentials (say, with a work account to access private repos and also with a personal account to access public repos) you'll need to tell the [Credential Manager](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest) to use the full path of the repo instead of just the host (Github.com).
+Finally, if you need to sign-in to GitHub repos with different credentials (say, with a work account to access private repos and also with a personal account to access public repos) you'll need to tell the [Credential Manager](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest) to use the full path of the repo instead of just the host (Github.com). And you may need to set the name of the credential helper too.
 
 ```bash
-git config –global credential.useHttpPath true
+git config --global credential.useHttpPath true
+
+git config --global credential.helper manager
 ```
 
 ## Batch File Documentation
