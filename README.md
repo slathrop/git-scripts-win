@@ -31,6 +31,9 @@ Finally, if you need to sign-in to GitHub repos with different credentials (say,
 git config --global credential.useHttpPath true
 
 git config --global credential.helper manager
+
+# Optional
+git config --global credential.modalPrompt true
 ```
 
 And if you ever need to clear any previously-cached credentials for GitHub to force prompting for new credentials (on your next git action requiring a login) you can run this command:
