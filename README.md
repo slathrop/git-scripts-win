@@ -32,7 +32,7 @@ git config --global credential.useHttpPath true
 
 git config --global credential.helper manager
 
-# Optional
+# Optional - prefer GUI prompt for credentials
 git config --global credential.modalPrompt true
 ```
 
