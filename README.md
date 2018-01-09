@@ -33,6 +33,14 @@ git config --global credential.useHttpPath true
 git config --global credential.helper manager
 ```
 
+And if you ever need to clear any previously-cached credentials for GitHub to force prompting for new credentials (on your next git action requiring a login) you can run this command:
+
+```bash
+git credential-wincred erase
+host=github.com
+protocol=https
+```
+
 ## Batch File Documentation
 
 To use a batch file, simply enter its name at the Windows command prompt. The [Cmder](http://cmder.net/) console emulator (Full download with Git for Windows) is recommended over the built-in cmd.exe shell.
