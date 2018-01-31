@@ -8,11 +8,11 @@ Simply copy these files into the root folder of your git repo. Several free tool
 
 ## Recommended Setup
 
-If you are completely new to **Git** and you are on the Windows platform you're in luck, because I'm about to walk you through the steps to get productive with **git** quickly!
+If you are completely new to **Git** and you are on the Windows platform you're in luck, because I'm about to walk you through the steps to get productive with **Git** quickly!
 
 ### Windows - Setup for First Time Git User
 
-My first word of advice is to familiarize yourself with using **Git** from the command-line. Yes, **Git** integration is available in most graphical code editors/IDEs, but it would be impossible to describe how to use them all, they change their interfaces from time-to-time, and you won't always be able to use your favorite editor. So learn the command-line and you'll have a solid foundation in **git** skills.
+My first word of advice is to familiarize yourself with using **Git** from the command-line. Yes, **Git** integration is available in most graphical code editors/IDEs, but it would be impossible to describe how to use them all, they change their interfaces from time-to-time, and you won't always be able to use your favorite editor. So learn the command-line and you'll have a solid foundation in **Git** skills.
 
 #### Install Cmder
 
