@@ -15,7 +15,7 @@ echo New branch will be created under the name %gbn%
 pause
 echo.
 
-git push origin origin:refs/heads/%gbn%
+git push origin HEAD:refs/heads/%gbn%
 
 echo.
 

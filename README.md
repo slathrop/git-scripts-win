@@ -8,7 +8,124 @@ Simply copy these files into the root folder of your git repo. Several free tool
 
 ## Recommended Setup
 
-These batch files assume that you have installed [WinMerge](http://winmerge.org/about/)
+If you are completely new to **Git** and you are on the Windows platform you're in luck, because I'm about to walk you through the steps to get productive with **Git** quickly!
+
+### Windows - Setup for First Time Git User
+
+My first word of advice is to familiarize yourself with using **Git** from the command-line. Yes, **Git** integration is available in most graphical code editors/IDEs, but it would be impossible to describe how to use them all, they change their interfaces from time-to-time, and you won't always be able to use your favorite editor. So learn the command-line and you'll have a solid foundation in **Git** skills.
+
+#### Install Cmder
+
+On Windows I highly recommend the [Cmder](http://cmder.net/) console emulator (Full download *with Git for Windows*) instead of the built-in command-line. So before proceeding please download and install [Cmder](http://cmder.net/).
+
+#### Verify Git for Windows was Installed
+
+[Cmder](http://cmder.net/) installed *Git for Windows*, so let's verify that. First, do Start, Run, `cmder` and at the command prompt type:
+
+```bash
+git --version
+```
+
+If *Git for Windows* responded, you're all set to move on to the next step.
+
+#### Folders
+
+So now you are in [Cmder](http://cmder.net/) at the `C:\Users\...` prompt. So change directory into your root `C:\` folder.
+
+```
+cd \
+```
+
+And make a directory for all of the projects and source code that you'll be working on. I recommend:
+
+```
+md src
+cd src
+```
+
+Why use your root `C:\` folder and abbreviate the folder name? I recommend this because you'll often end up with extremely long/deep nested folder hierarchies when working with source code and it's best to start with something very short.
+
+#### Clone Your First Repo
+
+So you're at the `C:\src` prompt in [Cmder](http://cmder.net/) and here's where the good stuff begins.
+
+When you "clone" a source code repository (repo) **Git** will remember the original master location of the code, and thus allow you to easily check-in and "push" your changes/contributions back to that location (e.g., GitHub).
+
+But if you simply *download* code (from GitHub, for example) instead of *cloning* it, there is no link established (and no tracking of changes by **Git** at all) and you will have a harder time configuring your folder to push your contributions to the original location.
+
+If you are in that situation where you have *downloaded* code and made some minor changes, I'd recommend that you follow these steps to actually *clone* the repo, and then copy your previous changes from the download folder to this new, cloned folder.
+
+So here goes, let's clone this repo as an example. Here's the command:
+
+```bash
+git clone https://github.com/slathrop/git-scripts-win.git
+```
+
+This creates a new folder named `git-scripts-win`. So change your current directory to that subfolder.
+
+```bash
+cd git-scripts-win
+```
+
+You'll notice that **Cmder** has added some **Git** information to the command-prompt:
+
+```
+C:\src\git-scripts-win (master -> origin)
+```
+
+**Cmder** knows that **Git** is setup to track changes in this folder, and that you are currently working on the "master" branch.
+
+Congratulations, you have cloned your first **Git** repo!
+
+#### Practice Switching Between Branches
+
+You may have been asked to make contributions to, say, a `dev` branch instead of the `master` branch. So how do you do that? Using the batch files (*.bat) in this repo makes it easy. Enter this command:
+
+```
+git-switch-branch
+```
+
+And you'll see a list of available branches:
+
+```
+  dev                                 
+* master                              
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/dev                  
+  remotes/origin/master               
+                                      
+                                      
+Switch to a different branch...       
+                                      
+Branch Name:                          
+```
+
+Your current branch, `master`, is starred, and you are prompted to enter the name of the branch to which you'd like to switch. Enter `dev`.
+
+You'll see:
+
+```
+Branch Name: dev
+Switched to branch 'dev'
+```
+
+#### Make Your First Contribution
+
+Assuming you are working against a repo to which you have write access, making your first contribution to the repo is easy. After *cloning*, simply add/edit files as needed, or copy files from other locations into your local, cloned folder structure.
+
+And here's the important, time-saving step: Copy all of the batch files from this repo (git-*.bat) into the root folder of the repo you're working on. And then you can type:
+
+```
+git-update
+```
+
+You'll be prompted for a short "commit message" (no quotes are needed in the message). Type it in and press ENTER.
+
+Congratulations, you've made your first contribution to a git repo!
+
+### Additional Nice-to-Have Setup for Git on Windows
+
+Some of the batch files in this repo assume that you have installed [WinMerge](http://winmerge.org/about/)
 and that you have configured git to use it as your merge tool.
 
 ```bash
