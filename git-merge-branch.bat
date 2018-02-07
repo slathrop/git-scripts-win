@@ -30,4 +30,8 @@ echo.
 echo When you are ready to push your merged changes
 echo to the remote server, run "git-update"
 echo.
+echo After that, if you want to fast-forward the %gbn% branch to be
+echo even with master, switch back to %gbn% with "git-switch-branch"
+echo and then run "git-ff-branch".
+echo.
 echo.
