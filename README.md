@@ -1,12 +1,8 @@
 # Git Shell Scripts for Windows (Batch Files)
 
-Simple Windows Batch files for common git operations.
+Simple Windows Batch files for common **Git** operations.
 
-## Installation
-
-Simply copy these files into the root folder of your git repo. Several free tools are also highly recommended (see download links in the following sections).
-
-## Recommended Setup
+## Welcome, Let's get Productive with Git on Windows!
 
 If you are completely new to **Git** and you are on the Windows platform you're in luck, because I'm about to walk you through the steps to get productive with **Git** quickly!
 
@@ -18,7 +14,9 @@ My first word of advice is to familiarize yourself with using **Git** from the c
 
 On Windows I highly recommend the [Cmder](http://cmder.net/) console emulator (Full download *with Git for Windows*) instead of the built-in command-line. So before proceeding please download and install [Cmder](http://cmder.net/).
 
-#### Verify Git for Windows was Installed
+Cmder can be used with the [Visual Studio Code (VSCode)](https://code.visualstudio.com/) integrated terminal. See [here](https://github.com/cmderdev/cmder/pull/1416) for details.
+
+#### Verify that Git for Windows was Installed
 
 [Cmder](http://cmder.net/) installed *Git for Windows*, so let's verify that. First, do Start, Run, `cmder` and at the command prompt type:
 
@@ -55,11 +53,13 @@ But if you simply *download* code (from GitHub, for example) instead of *cloning
 
 If you are in that situation where you have *downloaded* code and made some minor changes, I'd recommend that you follow these steps to actually *clone* the repo, and then copy your previous changes from the download folder to this new, cloned folder.
 
-So here goes, let's clone this repo as an example. Here's the command:
+So here goes, let's clone this `git-scripts-win` repo as an example. Here's the command:
 
 ```bash
 git clone https://github.com/slathrop/git-scripts-win.git
 ```
+
+(You can also read the GitHub documentation [here](https://help.github.com/articles/cloning-a-repository/) for more details on this command.)
 
 This creates a new folder named `git-scripts-win`. So change your current directory to that subfolder.
 
@@ -76,6 +76,12 @@ C:\src\git-scripts-win (master -> origin)
 **Cmder** knows that **Git** is setup to track changes in this folder, and that you are currently working on the "master" branch.
 
 Congratulations, you have cloned your first **Git** repo!
+
+## Installation of Windows Batch Scripts
+
+Now that you have cloned this repo, add your local repo folder (`C:\src\git-scripts-win` if you followed the example above) [to your `PATH` environment variable](https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/).
+
+After editing your `PATH` environment variable, you'll need to exit **Cmder** and re-run it to allow the `PATH` change to be seen by **Cmder**. So do that now before continuing with the next step.
 
 #### Practice Switching Between Branches
 
