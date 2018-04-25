@@ -77,7 +77,7 @@ C:\src\git-scripts-win (master -> origin)
 
 Congratulations, you have cloned your first **Git** repo!
 
-## Installation of Windows Batch Scripts
+### Installation and Use of Windows Batch Scripts
 
 Now that you have cloned this repo, add your local repo folder (`C:\src\git-scripts-win` if you followed the example above) [to your `PATH` environment variable](https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/).
 
