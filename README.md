@@ -12,19 +12,19 @@ My first word of advice is to familiarize yourself with using **Git** from the c
 
 #### Install Cmder
 
-On Windows I highly recommend the [Cmder](http://cmder.net/) console emulator (Full download *with Git for Windows*) instead of the built-in command-line. So before proceeding please download and install [Cmder](http://cmder.net/).
+On Windows I highly recommend the [Cmder](http://cmder.net/) console emulator (Full download _with Git for Windows_) instead of the built-in command-line. So before proceeding please download and install [Cmder](http://cmder.net/).
 
 Cmder can be used with the [Visual Studio Code (VSCode)](https://code.visualstudio.com/) integrated terminal. See [here](https://github.com/cmderdev/cmder/pull/1416) for details.
 
 #### Verify that Git for Windows was Installed
 
-[Cmder](http://cmder.net/) installed *Git for Windows*, so let's verify that. First, do Start, Run, `cmder` and at the command prompt type:
+[Cmder](http://cmder.net/) installed _Git for Windows_, so let's verify that. First, do Start, Run, `cmder` and at the command prompt type:
 
 ```bash
 git --version
 ```
 
-If *Git for Windows* responded, you're all set to move on to the next step.
+If _Git for Windows_ responded, you're all set to move on to the next step.
 
 #### Folders
 
@@ -49,9 +49,9 @@ So you're at the `C:\src` prompt in [Cmder](http://cmder.net/) and here's where 
 
 When you "clone" a source code repository (repo) **Git** will remember the original master location of the code, and thus allow you to easily check-in and "push" your changes/contributions back to that location (e.g., GitHub).
 
-But if you simply *download* code (from GitHub, for example) instead of *cloning* it, there is no link established (and no tracking of changes by **Git** at all) and you will have a harder time configuring your folder to push your contributions to the original location.
+But if you simply _download_ code (from GitHub, for example) instead of _cloning_ it, there is no link established (and no tracking of changes by **Git** at all) and you will have a harder time configuring your folder to push your contributions to the original location.
 
-If you are in that situation where you have *downloaded* code and made some minor changes, I'd recommend that you follow these steps to actually *clone* the repo, and then copy your previous changes from the download folder to this new, cloned folder.
+If you are in that situation where you have _downloaded_ code and made some minor changes, I'd recommend that you follow these steps to actually _clone_ the repo, and then copy your previous changes from the download folder to this new, cloned folder.
 
 So here goes, let's clone this `git-scripts-win` repo as an example. Here's the command:
 
@@ -85,7 +85,7 @@ After editing your `PATH` environment variable, you'll need to exit **Cmder** an
 
 #### Practice Switching Between Branches
 
-You may have been asked to make contributions to, say, a `dev` branch instead of the `master` branch. So how do you do that? Using the batch files (*.bat) in this repo makes it easy. Enter this command:
+You may have been asked to make contributions to, say, a `dev` branch instead of the `master` branch. So how do you do that? Using the batch files (\*.bat) in this repo makes it easy. Enter this command:
 
 ```
 git-switch-branch
@@ -94,16 +94,16 @@ git-switch-branch
 And you'll see a list of available branches:
 
 ```
-  dev                                 
-* master                              
+  dev
+* master
   remotes/origin/HEAD -> origin/master
-  remotes/origin/dev                  
-  remotes/origin/master               
-                                      
-                                      
-Switch to a different branch...       
-                                      
-Branch Name:                          
+  remotes/origin/dev
+  remotes/origin/master
+
+
+Switch to a different branch...
+
+Branch Name:
 ```
 
 Your current branch, `master`, is starred, and you are prompted to enter the name of the branch to which you'd like to switch. Enter `dev`.
@@ -117,9 +117,9 @@ Switched to branch 'dev'
 
 #### Make Your First Contribution
 
-Assuming you are working against a repo to which you have write access, making your first contribution to the repo is easy. After *cloning*, simply add/edit files as needed, or copy files from other locations into your local, cloned folder structure.
+Assuming you are working against a repo to which you have write access, making your first contribution to the repo is easy. After _cloning_, simply add/edit files as needed, or copy files from other locations into your local, cloned folder structure.
 
-And here's the important, time-saving step: Copy all of the batch files from this repo (git-*.bat) into the root folder of the repo you're working on. And then you can type:
+And here's the important, time-saving step: Copy all of the batch files from this repo (git-\*.bat) into the root folder of the repo you're working on. And then you can type:
 
 ```
 git-update
@@ -214,3 +214,11 @@ Walks you through switching from your current branch to a different branch so th
 ### git-update
 
 Walks you through committing your changes locally and then syncing those changes with the remote repo.
+
+### git-ff-branch
+
+When your branch has had no intervening changes since it was branched from, rebased against, or merged with master, and you simply want to bring your branch even with the latest changes in master, this does the job.
+
+### git-rebase-branch
+
+When your branch _does_ have intervening changes that cause it to differ from master, and commits have been applied to master that you want to be applied to your branch as well, this will do the job.
