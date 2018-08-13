@@ -221,7 +221,11 @@ When your branch has had no intervening changes since it was branched from, reba
 
 ### git-rebase-branch
 
-When your branch _does_ have intervening changes that cause it to differ from master, and commits have been applied to master that you want to be applied to your branch as well, this will do the job.
+When your branch _does_ have intervening changes that cause it to differ from master, and commits have been applied to master that you want to be applied to your branch as well, this will do the job. This script is formulated to minimize merge conflicts and "just work" most of the time by favoring the changes in the local branch over otherwise conflicting changes in master.
+
+### git-merge-master
+
+Merge master locally into your current branch, favoring the current branch's changes over master however. This avoids the duplicate "replay" of commits that can occur with rebasing.
 
 ### git-log
 

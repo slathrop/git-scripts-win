@@ -15,6 +15,7 @@ pause
 echo.
 echo.
 
-git rebase master
+REM "Ours" and "theirs" mean the opposite of what they do during a straight merge
+git rebase -s recursive -X theirs master
 
 echo.
