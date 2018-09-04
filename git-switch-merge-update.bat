@@ -7,7 +7,16 @@ git branch -a
 
 echo.
 echo.
-echo Switch to a branch, merge changes from master, and update...
+echo Steps we will take...
+echo.
+echo 1 - Commit changes in current branch (master)
+echo 2 - Switch to another branch
+echo 3 - Merge changes from master, and
+echo 4 - Commit changes to the destination branch
+echo.
+
+call git-update.bat
+
 echo.
 
 set /p gbn="Branch Name (other than master): "
