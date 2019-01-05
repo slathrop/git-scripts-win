@@ -119,7 +119,7 @@ Switched to branch 'dev'
 
 Assuming you are working against a repo to which you have write access, making your first contribution to the repo is easy. After _cloning_, simply add/edit files as needed, or copy files from other locations into your local, cloned folder structure.
 
-And here's the important, time-saving step: Copy all of the batch files from this repo (git-\*.bat) into the root folder of the repo you're working on. And then you can type:
+And then you can type:
 
 ```
 git-update
