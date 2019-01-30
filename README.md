@@ -6,15 +6,17 @@ Simple Windows Batch files for common **Git** operations.
 
 If you are completely new to **Git** and you are on the Windows platform you're in luck, because I'm about to walk you through the steps to get productive with **Git** quickly!
 
+And in the process of getting you up-to-speed with **Git** I'll also provide some recommendations for overall **dev machine setup on Windows** as well.
+
 ### Windows - Setup for First Time Git User
 
 My first word of advice is to familiarize yourself with using **Git** from the command-line. Yes, **Git** integration is available in most graphical code editors/IDEs, but it would be impossible to describe how to use them all, they change their interfaces from time-to-time, and you won't always be able to use your favorite editor. So learn the command-line and you'll have a solid foundation in **Git** skills.
 
 #### Install Cmder
 
-On Windows I highly recommend the [Cmder](http://cmder.net/) console emulator (Full download _with Git for Windows_) instead of the built-in command-line. So before proceeding please download and install [Cmder](http://cmder.net/).
+On Windows I highly recommend the [Cmder](http://cmder.net/) console emulator (Full download _with Git for Windows_) instead of the built-in command-line (**Git Bash** shell and the **Hyper** shell by _Zeit_ are also popular and useful `cmd.exe` alternatives). So before proceeding please download and install [Cmder](http://cmder.net/).
 
-Cmder can be used with the [Visual Studio Code (VSCode)](https://code.visualstudio.com/) integrated terminal. See [here](https://github.com/cmderdev/cmder/pull/1416) for details.
+Cmder can be used inside the [Visual Studio Code (VSCode)](https://code.visualstudio.com/) _integrated terminal_. See [here](https://github.com/cmderdev/cmder/pull/1416) for details. See below for help installing VSCode and other tools.
 
 #### Verify that Git for Windows was Installed
 
@@ -30,13 +32,13 @@ If _Git for Windows_ responded, you're all set to move on to the next step.
 
 So now you are in [Cmder](http://cmder.net/) at the `C:\Users\...` prompt. So change directory into your root `C:\` folder.
 
-```
+```bash
 cd \
 ```
 
 And make a directory for all of the projects and source code that you'll be working on. I recommend:
 
-```
+```bash
 md src
 cd src
 ```
@@ -69,7 +71,7 @@ cd git-scripts-win
 
 You'll notice that **Cmder** has added some **Git** information to the command-prompt:
 
-```
+```bash
 C:\src\git-scripts-win (master -> origin)
 ```
 
@@ -87,13 +89,13 @@ After editing your `PATH` environment variable, you'll need to exit **Cmder** an
 
 You may have been asked to make contributions to, say, a `dev` branch instead of the `master` branch. So how do you do that? Using the batch files (\*.bat) in this repo makes it easy. Enter this command:
 
-```
+```bash
 git-switch-branch
 ```
 
 And you'll see a list of available branches:
 
-```
+```bash
   dev
 * master
   remotes/origin/HEAD -> origin/master
@@ -121,7 +123,7 @@ Assuming you are working against a repo to which you have write access, making y
 
 And then you can type:
 
-```
+```bash
 git-update
 ```
 
@@ -129,7 +131,48 @@ You'll be prompted for a short "commit message" (no quotes are needed in the mes
 
 Congratulations, you've made your first contribution to a git repo!
 
-### Additional Nice-to-Have Setup for Git on Windows
+### Additional Nice-to-Have Setup for Devs on Windows
+
+For software development on Windows you'll want to install a number of popular tools. The Windows Package Manager **Chocolatey** makes it very easy to install these tools.
+
+When setting-up a Windows 10 machine from scratch, here's my recommended routine.
+
+#### Chocolatey Package Manager and Recommended Installs
+
+From the Cmder (or other) command prompt, install **Chocolatey** (this is the `cmd.exe` method [recommended on the **Chocolatey** website](https://chocolatey.org/install#installing-chocolatey)) by pasting and executing this command.
+
+```bash
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+```
+
+And here are the Chocolatey install (`cinst`) commands for installing popular dev tools.
+
+```bash
+cinst winmerge
+cinst vscode
+cinst nodejs-lts
+cinst yarn
+cinst dotnetcore
+cinst slack
+cinst AzureStorageExplorer
+cinst docker-for-windows
+cinst postgresql
+cinst pgadmin4
+```
+
+Additional **Chocolatey** packages can be discovered by using the `list` (aka `search`) command.
+
+```bash
+clist <filter>
+```
+
+For example:
+
+```bash
+clist mongodb
+```
+
+#### Recommended Git Configuration
 
 Some of the batch files in this repo assume that you have installed [WinMerge](http://winmerge.org/about/)
 and that you have configured git to use it as your merge tool.
@@ -167,9 +210,11 @@ host=github.com
 protocol=https
 ```
 
+Note that using this command is a little tricky. Paste the first line and execute it. Then paste the 2nd and 3rd line and complete the command by pressing `CTRL+Z`.
+
 ## Batch File Documentation
 
-To use a batch file, simply enter its name at the Windows command prompt. The [Cmder](http://cmder.net/) console emulator (Full download with Git for Windows) is recommended over the built-in cmd.exe shell.
+To use a batch file, simply enter its name at the Windows command prompt. The [Cmder](http://cmder.net/) console emulator (Full download with Git for Windows) is recommended over the built-in `cmd.exe` shell.
 
 These batch scripts are designed to prompt you before taking any action against your repo. So you may always press `CTRL+C` to exit a script after launching it but before it performs any actions.
 
