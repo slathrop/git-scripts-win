@@ -152,7 +152,7 @@ cinst winmerge
 cinst vscode
 cinst nodejs-lts
 cinst yarn
-cinst dotnetcore
+cinst dotnetcore-sdk
 cinst slack
 cinst AzureStorageExplorer
 cinst docker-for-windows
