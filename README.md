@@ -154,6 +154,7 @@ cinst nodejs-lts
 cinst yarn
 cinst dotnetcore-sdk
 cinst slack
+cinst azure-cli
 cinst AzureStorageExplorer
 cinst docker-for-windows
 cinst postgresql
