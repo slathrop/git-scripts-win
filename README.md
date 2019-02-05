@@ -159,6 +159,7 @@ cinst AzureStorageExplorer
 cinst docker-for-windows
 cinst postgresql
 cinst pgadmin4
+cinst procexp
 ```
 
 Additional **Chocolatey** packages can be discovered by using the `list` (aka `search`) command.
